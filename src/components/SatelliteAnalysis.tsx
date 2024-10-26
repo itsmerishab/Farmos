@@ -15,13 +15,12 @@ export default function SatelliteAnalysis() {
   ];
 
   return (
-    <div className="bg-white rounded-lg shadow-lg p-6">
-      <div className="flex items-center gap-3 mb-6">
-        <Scan className="w-6 h-6 text-green-600" />
+    <div>
+      <div>
         <h2 className="title">Satellite Analysis</h2>
       </div>
 
-      <div className="space-y-6">
+      <div>
         {/* Satellite Image */}
         <div className="relative">
           <img 
@@ -30,7 +29,7 @@ export default function SatelliteAnalysis() {
             className="w-full h-64 object-cover rounded-lg"
           />
           <div>
-            <div className="absolute bottom-4 left-4 text-white">
+            <div>
               <p className="updatetime">Last Updated: Today, 10:30 AM</p>
               <p className="resoval">Resolution: 0.5m/pixel</p>
             </div>
@@ -40,8 +39,8 @@ export default function SatelliteAnalysis() {
         {/* Health Metrics */}
         <div>
           {healthMetrics.map((metric, index) => (
-            <div key={index} className="bg-gray-50 p-4 rounded-lg">
-              <div className="flex items-center gap-2 mb-2">
+            <div key={index}>
+              <div>
                 <span className={`h-2 w-2 rounded-full ${
                   metric.status === 'good' ? 'bg-green-500' :
                   metric.status === 'warning' ? 'bg-yellow-500' : 'bg-red-500'
